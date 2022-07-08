@@ -35,7 +35,7 @@ public class MoveBall : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col)
     {
         // hit the left racket
-        if (col.gameObject.name == "Left VVD")
+        if (col.gameObject.name == "Left Player")
         {
             //calculate hit factor
             float y = hitfactor(transform.position, col.transform.position, col.collider.bounds.size.y);
@@ -49,7 +49,7 @@ public class MoveBall : MonoBehaviour
 
 
         //hit the right racket
-        if(col.gameObject.name == "Right TAA")
+        if(col.gameObject.name == "Right Player")
         {
             //calc hit factor
             float y = hitfactor(transform.position, col.transform.position, col.collider.bounds.size.y);
@@ -87,14 +87,14 @@ public class MoveBall : MonoBehaviour
         {
             Time.timeScale = 0;
 
-            Win.text = "VVD Won";
+            Win.text = "Player1 Won";
         }
 
         if (scoreRight == 5)
         {
             Time.timeScale = 0;
 
-            Win.text = "TAA Won";
+            Win.text = "Player2 Won";
         }
 
     }

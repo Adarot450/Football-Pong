@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayButton : MonoBehaviour
+public class Button : MonoBehaviour
 {
 
-    //public string SceneName;
+    public static string Player1;
+    public static string Player2;
 
     // Start is called before the first frame update
     void Start()
     {
-        //ChangeScene(SceneName);
+
     }
 
     // Update is called once per frame
@@ -28,6 +29,15 @@ public class PlayButton : MonoBehaviour
     public void QuitGame ()
     {
         Application.Quit();
+    }
+
+    public void ChoosePlayer1(string Name)
+    {
+        Player1 = Name;
+    }
+    public void ChoosePlayer2(string Name)
+    {
+        Player2 = Name;
     }
 
 }
