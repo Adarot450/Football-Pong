@@ -5,10 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class PlayButton : MonoBehaviour
 {
+
+    //public string SceneName;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        //ChangeScene(SceneName);
     }
 
     // Update is called once per frame
@@ -17,9 +20,14 @@ public class PlayButton : MonoBehaviour
         
     }
 
-    public void NextScene()
+    public void ChangeScene(string Scene)
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(Scene);
+    }
+
+    public void QuitGame ()
+    {
+        Application.Quit();
     }
 
 }
