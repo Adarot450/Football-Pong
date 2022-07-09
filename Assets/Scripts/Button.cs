@@ -6,8 +6,9 @@ using UnityEngine.SceneManagement;
 public class Button : MonoBehaviour
 {
 
-    public static string Player1;
-    public static string Player2;
+    public static string Player1= "VVD";
+    public static string Player2= "TAA";
+    public static int ScoreToBeat = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -35,9 +36,14 @@ public class Button : MonoBehaviour
     {
         Player1 = Name;
     }
+
     public void ChoosePlayer2(string Name)
     {
         Player2 = Name;
     }
 
+    public void ChangeScoreToBeat (int score)
+    {
+        ScoreToBeat = score;
+    }
 }
