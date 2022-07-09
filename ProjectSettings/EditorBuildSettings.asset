@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Chose Player2.unity
     guid: 957b1a58dde4149289c73133da1da2f4
+  - enabled: 1
+    path: Assets/Scenes/Win Scene.unity
+    guid: 46fe8e059928542aa9cf57d37fbb0fb2
   m_configObjects: {}

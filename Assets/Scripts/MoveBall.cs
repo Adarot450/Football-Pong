@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class MoveBall : MonoBehaviour
 { 
@@ -11,6 +13,8 @@ public class MoveBall : MonoBehaviour
     int scoreRight;
     int scoreLeft;
     public Text Win;
+    public static bool Player1Won;
+    public static bool Player2Won;
 
     // Start is called before the first frame update
     void Start()
@@ -83,18 +87,26 @@ public class MoveBall : MonoBehaviour
             transform.position = new Vector2(0, 0);
         }
 
-        if (scoreLeft == 5)
+        if (scoreLeft == Button.ScoreToBeat)
         {
-            Time.timeScale = 0;
+            Player1Won = true;
+            SceneManager.LoadScene("Win Scene");
 
-            Win.text = "Player1 Won";
+
+            //Time.timeScale = 0;
+
+            //Win.text = "Player1 Won";
         }
 
-        if (scoreRight == 5)
+        if (scoreRight == Button.ScoreToBeat)
         {
-            Time.timeScale = 0;
+            Player2Won = true;
+            SceneManager.LoadScene("Win Scene");
 
-            Win.text = "Player2 Won";
+
+            //Time.timeScale = 0;
+
+            //Win.text = "Player2 Won";
         }
 
     }
